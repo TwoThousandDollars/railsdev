@@ -5,8 +5,8 @@ ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# Use pg as the database for Active Record
+gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -18,12 +18,12 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -36,6 +36,8 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
+  gem 'annotate', '~> 3.1', '>= 3.1.1'
+  gem 'faker', '~> 2.16'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
@@ -58,3 +60,11 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'friendly_id', '~> 5.4', '>= 5.4.1'
 gem 'sidekiq', '~> 6.1', '>= 6.1.2'
 gem 'name_of_person', '~> 1.1', '>= 1.1.1'
+gem 'whenever', '~> 1.0'
+gem "stripe", "~> 5.30"
+gem "stripe_event", "~> 2.3"
+gem "pay", "~> 2.6"
+gem "pagy", "~> 3.11"
+gem "inline_svg", "~> 1.7"
+gem "pry-rails", "~> 0.3.9"
+gem "simple_discussion", "~> 1.2"
